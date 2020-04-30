@@ -15,7 +15,7 @@ I have not had to track down performanc issues. I do try to avoid nesting loops 
 I would add a cuisine and website key to the restaurant object. I would also add an endpoint that randomly suggests a restaurant within the city provided by the user.
 
 5.	Please describe yourself using JSON.
-
+```
 {
     "name": "David",
     "occupation": "Web Developer",
@@ -33,3 +33,4 @@ I would add a cuisine and website key to the restaurant object. I would also add
         }
     ]
 }
+```
