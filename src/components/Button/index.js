@@ -1,10 +1,15 @@
 import React from 'react';
+import styled from 'styled-components'
 
-const Button = ({...props}) => {
+const StyledButton = styled('button')({
+    background: 'none',
+})
+
+const Button = ({children, ...props}) => {
     return (
-        <button {...props}>
-            
-        </button>
+        <StyledButton {...props}>
+            {children}
+        </StyledButton>
     );
 };
 

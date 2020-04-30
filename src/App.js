@@ -27,9 +27,11 @@ function App() {
     fetch(`https://opentable.herokuapp.com/api/restaurants?page=${page}&per_page=${perPage}&city=${searchCriteria}`, requestOptions)
       .then(response => response.json())
       .then(result => {
-        dispatch(setData(result.restaurants))
-        setPage(page + 1)
-        setEntries(result.total_entries - (perPage * page))
+        if (result.restaurants) {
+          dispatch(setData(result.restaurants))
+          setPage(page + 1)
+          setEntries(result.total_entries - (perPage * page))
+        }
     })
   }
 
