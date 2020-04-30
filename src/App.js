@@ -24,7 +24,7 @@ function App() {
         redirect: 'follow'
     };
 
-    fetch(`http://opentable.herokuapp.com/api/restaurants?page=${page}&per_page=${perPage}&city=${searchCriteria}`, requestOptions)
+    fetch(`https://opentable.herokuapp.com/api/restaurants?page=${page}&per_page=${perPage}&city=${searchCriteria}`, requestOptions)
       .then(response => response.json())
       .then(result => {
         dispatch(setData(result.restaurants))
